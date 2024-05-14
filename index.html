@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>assist.org explorer</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="/style.css" />
+		<link rel="icon" href="/favicon.ico" />
+		<script src="/meowing.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/cash-dom/dist/cash.min.js"></script>
+		<script src="app.js"></script>
+		<style> 
+		.cc {
+			font-weight: bold;
+		}
+		#app div {
+			margin: 1rem
+		}
+		</style>
+	</head>
+	
+	<body>
+		<h1>assist.org explorer</h1>
+		<h2>DOUBLE CHECK assist.org BEFORE MAKING ANY DECISIONS BASED OFF THIS SITE</h2>
+		<h3><a href="https://assist.org" target="_blank">assist.org</a> | <a href="https://cvc.edu" target="_blank">cvc.edu</a></h3>
+
+		<div id="app">
+			<div>
+				<label for="dept">Department</label>
+				<select id="dept"></select>
+			</div>
+			<div>
+				<label for="class" title="if it doesn't show up, it doesn't transfer as a class">Class</label>
+				<select id="class"></select>
+			</div>
+			<ul id="results"></ul>
+		</div>
+
+		<h3>technical notes/documentation</h3>
+		<ul><li>using <a href="assist.py">this python script</a> to scrape the assist api</li>
+		<li title="you can view the raw data file at ./dept-all.json.  it was generated with arguments 'all' on [0, 201)"> we should probably update the data on some interval, but rn it's static !! :3 </li>
+		<li> don't ask why everything has parentheses</li>
+		<li>get the institutions.json from <code>curl 'https://assist.org/api/institutions' -o institutions.json</code></li>
+		</ul>
+	</body>
+
+</html>
